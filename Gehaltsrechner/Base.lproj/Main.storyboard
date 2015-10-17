@@ -866,7 +866,7 @@
                             </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-mD-vge">
                                 <rect key="frame" x="340" y="250" width="29" height="26"/>
-                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" image="B17363F0-A6B3-4EF6-BED8-29DEA3B4DB91" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMS-tR-ug4">
+                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" image="5E4952F7-F359-474C-8B09-1011CA394FD8" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMS-tR-ug4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1063,7 +1063,7 @@ SWXMLHash - https://github.com/drmohundro/SWXMLHash</string>
         </scene>
     </scenes>
     <resources>
-        <image name="B17363F0-A6B3-4EF6-BED8-29DEA3B4DB91" width="1" height="1">
+        <image name="5E4952F7-F359-474C-8B09-1011CA394FD8" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
