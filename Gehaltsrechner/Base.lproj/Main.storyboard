@@ -651,7 +651,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="MainWindow" customModule="Gehaltsrechner" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Gehaltsrechner" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="435"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -671,12 +671,12 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Gehaltsrechner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="NSVisualEffectView">
-                        <rect key="frame" x="0.0" y="0.0" width="442" height="435"/>
+                    <view key="view" autoresizesSubviews="NO" canDrawConcurrently="YES" id="m2S-Jp-Qdl" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="442" height="466"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cip-g7-YuS">
-                                <rect key="frame" x="34" y="327" width="134" height="22"/>
+                                <rect key="frame" x="34" y="337" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="WLr-ha-UPj">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="0zw-9s-ybe"/>
                                     <font key="font" metaFont="system"/>
@@ -688,7 +688,7 @@
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5I-ex-dRq">
-                                <rect key="frame" x="174" y="327" width="164" height="22"/>
+                                <rect key="frame" x="174" y="337" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bruttoeinkommen" id="X7w-xf-VLr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -696,7 +696,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-nI-TgK">
-                                <rect key="frame" x="174" y="302" width="164" height="22"/>
+                                <rect key="frame" x="174" y="312" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="betriebl. Altersvorsorge" id="m3p-jP-nBd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -704,7 +704,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nf8-Ea-ymf">
-                                <rect key="frame" x="174" y="277" width="164" height="22"/>
+                                <rect key="frame" x="174" y="287" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brutto Gesamt" id="uIA-A6-ySZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -712,7 +712,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ijO-tb-XPO">
-                                <rect key="frame" x="174" y="252" width="164" height="22"/>
+                                <rect key="frame" x="174" y="262" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Lohnsteuer" id="PxI-9i-i3A">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -720,7 +720,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-vZ-ZxS">
-                                <rect key="frame" x="174" y="227" width="164" height="22"/>
+                                <rect key="frame" x="174" y="237" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Soli" id="3sv-ff-DQZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -728,7 +728,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6XM-bL-Xfi">
-                                <rect key="frame" x="174" y="202" width="164" height="22"/>
+                                <rect key="frame" x="174" y="212" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Kirchensteuer" id="FfP-4T-hEC">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -736,7 +736,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="435-SI-d8J">
-                                <rect key="frame" x="174" y="177" width="164" height="22"/>
+                                <rect key="frame" x="174" y="187" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rentenversicherung" id="Ml9-hX-eSQ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -744,7 +744,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EZu-r2-TcF">
-                                <rect key="frame" x="174" y="152" width="164" height="22"/>
+                                <rect key="frame" x="174" y="162" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arbeitslosenversicherung" id="97U-ib-dSm">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -752,7 +752,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Xc-L2-7fq">
-                                <rect key="frame" x="174" y="127" width="164" height="22"/>
+                                <rect key="frame" x="174" y="137" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Krankenversicherung" id="2kF-05-G1X">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -760,7 +760,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Pm-iO-Gxd">
-                                <rect key="frame" x="34" y="302" width="134" height="22"/>
+                                <rect key="frame" x="34" y="312" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="GnO-Jh-aZV">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="ayL-iW-IUZ"/>
                                     <font key="font" metaFont="system"/>
@@ -769,7 +769,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-uz-HzH">
-                                <rect key="frame" x="34" y="277" width="134" height="22"/>
+                                <rect key="frame" x="34" y="287" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="v4a-Ii-uj2">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="jYl-Y0-c1Z"/>
                                     <font key="font" metaFont="system"/>
@@ -778,7 +778,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hX-LH-LGs">
-                                <rect key="frame" x="34" y="227" width="134" height="22"/>
+                                <rect key="frame" x="34" y="237" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="r8F-kv-kRG">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="fji-rb-kOP"/>
                                     <font key="font" metaFont="system"/>
@@ -787,7 +787,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRa-47-Pg9">
-                                <rect key="frame" x="34" y="202" width="134" height="22"/>
+                                <rect key="frame" x="34" y="212" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="KYG-gU-xca">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="2LV-rV-pu8"/>
                                     <font key="font" metaFont="system"/>
@@ -796,7 +796,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNu-Hh-Sgd">
-                                <rect key="frame" x="34" y="177" width="134" height="22"/>
+                                <rect key="frame" x="34" y="187" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="gbZ-z5-Auf">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="AgV-4u-Fcr"/>
                                     <font key="font" metaFont="system"/>
@@ -805,7 +805,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6W5-Ib-xqn">
-                                <rect key="frame" x="34" y="152" width="134" height="22"/>
+                                <rect key="frame" x="34" y="162" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="9d2-PI-N3q">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="0o9-Yf-bdM"/>
                                     <font key="font" metaFont="system"/>
@@ -814,7 +814,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jW-zF-ySf">
-                                <rect key="frame" x="34" y="127" width="134" height="22"/>
+                                <rect key="frame" x="34" y="137" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="r6r-1D-aWA">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="xTy-ix-7gf"/>
                                     <font key="font" metaFont="system"/>
@@ -823,7 +823,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufM-3e-izu">
-                                <rect key="frame" x="174" y="102" width="164" height="22"/>
+                                <rect key="frame" x="174" y="112" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pflegeversicherung" id="2Nh-wc-QJg">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -831,7 +831,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6P-1n-u91">
-                                <rect key="frame" x="34" y="102" width="134" height="22"/>
+                                <rect key="frame" x="34" y="112" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="T39-YV-Scf">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="mp2-kG-aPe"/>
                                     <font key="font" metaFont="system"/>
@@ -840,7 +840,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASQ-pm-OsG">
-                                <rect key="frame" x="174" y="77" width="164" height="22"/>
+                                <rect key="frame" x="174" y="87" width="164" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nettoeinkommen" id="KKY-yw-nQH">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -848,7 +848,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsh-Zk-VNV">
-                                <rect key="frame" x="34" y="77" width="134" height="22"/>
+                                <rect key="frame" x="34" y="87" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="Nvg-M1-7Bz">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="jk2-mk-dz1"/>
                                     <font key="font" metaFont="system"/>
@@ -857,7 +857,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-ip-pbH">
-                                <rect key="frame" x="32" y="380" width="129" height="22"/>
+                                <rect key="frame" x="32" y="390" width="129" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gehaltsrechner" id="nFo-A0-SQK">
                                     <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -865,31 +865,31 @@
                                 </textFieldCell>
                             </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-mD-vge">
-                                <rect key="frame" x="340" y="250" width="29" height="26"/>
-                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" image="5E4952F7-F359-474C-8B09-1011CA394FD8" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMS-tR-ug4">
+                                <rect key="frame" x="340" y="260" width="29" height="26"/>
+                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" image="B1C67C8A-A457-4030-80AC-7F62DCCE308D" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMS-tR-ug4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="qbk-Ad-laR" kind="popover" identifier="segueTest" popoverAnchorView="F2n-mD-vge" popoverBehavior="t" preferredEdge="maxY" id="9X2-pX-tfb"/>
+                                    <segue destination="qbk-Ad-laR" kind="popover" popoverAnchorView="F2n-mD-vge" popoverBehavior="t" preferredEdge="maxY" id="hK2-gc-bLR"/>
                                 </connections>
                             </button>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JpI-GH-dHS">
-                                <rect key="frame" x="340" y="200" width="29" height="26"/>
+                                <rect key="frame" x="340" y="210" width="29" height="26"/>
                                 <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZgM-vU-T7P">
                                     <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-NP-cWT">
-                                <rect key="frame" x="340" y="125" width="29" height="26"/>
+                                <rect key="frame" x="340" y="135" width="29" height="26"/>
                                 <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C9D-24-9pp">
                                     <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFW-rO-lIv">
-                                <rect key="frame" x="67" y="27" width="107" height="32"/>
+                                <rect key="frame" x="67" y="37" width="107" height="32"/>
                                 <buttonCell key="cell" type="push" title="Berechnen" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N06-Ce-FH7">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -899,7 +899,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-Wa-a1H">
-                                <rect key="frame" x="34" y="252" width="134" height="22"/>
+                                <rect key="frame" x="34" y="262" width="134" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0,00" drawsBackground="YES" id="B8x-d8-ZoS">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="tNP-ik-m2k"/>
                                     <font key="font" metaFont="system"/>
@@ -908,7 +908,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7N-VB-gKL">
-                                <rect key="frame" x="234" y="378" width="134" height="26"/>
+                                <rect key="frame" x="234" y="388" width="134" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="8I5-Mr-qJb" id="g4p-ZP-moR">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -925,7 +925,7 @@
                                 </connections>
                             </popUpButton>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89t-5I-H1T">
-                                <rect key="frame" x="399" y="17" width="25" height="25"/>
+                                <rect key="frame" x="399" y="27" width="25" height="25"/>
                                 <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pE0-39-vHc">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -952,7 +952,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="331.5"/>
+            <point key="canvasLocation" x="555" y="347"/>
         </scene>
         <!--Lohnsteuer View Controller-->
         <scene sceneID="3a0-Wh-blb">
@@ -985,9 +985,6 @@
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="ugc-0V-eo2"/>
                                 </popUpButtonCell>
-                                <connections>
-                                    <binding destination="8bu-Jv-sAx" name="content" keyPath="values.kinderfreibetragSelectbox" id="Raj-fN-E6c"/>
-                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Du-bj-DCM">
                                 <rect key="frame" x="18" y="20" width="103" height="21"/>
@@ -1005,7 +1002,7 @@
                                     <menu key="menu" id="zCF-To-xOD"/>
                                 </popUpButtonCell>
                                 <connections>
-                                    <binding destination="8bu-Jv-sAx" name="content" keyPath="values.steuerklasseSelectbox" id="Jz1-cn-HOK"/>
+                                    <action selector="steuerklasseAction:" target="qbk-Ad-laR" id="2zk-rd-Q9t"/>
                                 </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h72-UM-tQ1">
@@ -1015,16 +1012,13 @@
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="gwR-EB-E5U"/>
                                 </popUpButtonCell>
-                                <connections>
-                                    <binding destination="8bu-Jv-sAx" name="content" keyPath="values.birthdaySelectbox" id="GQY-zp-fsB"/>
-                                </connections>
                             </popUpButton>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="birthdaySelectbox" destination="h72-UM-tQ1" id="fUt-Wv-XaO"/>
-                        <outlet property="kinderfreibetragSelectbox" destination="cgE-nu-z3T" id="9db-eq-HTt"/>
-                        <outlet property="steuerklasseSelectbox" destination="jhH-7V-uoF" id="Kfr-Yj-E0r"/>
+                        <outlet property="birthdaySelectbox" destination="h72-UM-tQ1" id="bed-es-M4a"/>
+                        <outlet property="kinderfreibetragSelectbox" destination="cgE-nu-z3T" id="CRa-jx-tdg"/>
+                        <outlet property="steuerklasseSelectbox" destination="jhH-7V-uoF" id="yJd-YU-wdd"/>
                     </connections>
                 </viewController>
                 <customObject id="SZT-74-yBo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1036,7 +1030,7 @@
         <scene sceneID="LTB-E9-TDQ">
             <objects>
                 <viewController title="Hilfe " id="PgR-Is-kcx" sceneMemberID="viewController">
-                    <view key="view" id="psa-eb-ib6">
+                    <view key="view" wantsLayer="YES" id="psa-eb-ib6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1063,7 +1057,7 @@ SWXMLHash - https://github.com/drmohundro/SWXMLHash</string>
         </scene>
     </scenes>
     <resources>
-        <image name="5E4952F7-F359-474C-8B09-1011CA394FD8" width="1" height="1">
+        <image name="B1C67C8A-A457-4030-80AC-7F62DCCE308D" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

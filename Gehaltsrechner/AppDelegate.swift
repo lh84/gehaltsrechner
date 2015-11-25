@@ -30,8 +30,9 @@ class MainWindow: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        
-        super.window?.backgroundColor = NSColor(calibratedRed: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
+        super.window?.styleMask = (super.window?.styleMask)! | NSFullSizeContentViewWindowMask;
+        super.window?.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
+        super.window?.backgroundColor = NSColor(deviceRed: 1.0, green: 1.0, blue: 1.0, alpha: 0)
     }
     
 }

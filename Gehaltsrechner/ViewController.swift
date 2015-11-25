@@ -9,29 +9,66 @@
 import Cocoa
 import SWXMLHash
 
-class LohnsteuerViewController: NSViewController {
+class BaseController: NSViewController {
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+
+class LohnsteuerViewController: BaseController {
     
     /*Subview Lohnstsuer*/
     @IBOutlet weak var steuerklasseSelectbox: NSPopUpButton!
     @IBOutlet weak var birthdaySelectbox: NSPopUpButton!
     @IBOutlet weak var kinderfreibetragSelectbox: NSPopUpButton!
     
+    @IBAction func steuerklasseAction(sender: NSPopUpButton) {
+        defaults.setObject(sender.selectedItem!.title, forKey: "steuerklasseSelectbox")
+    }
+    @IBAction func birthdayAction(sender: NSPopUpButton) {
+        defaults.setObject(sender.selectedItem!.title, forKey: "birthdaySelectbox")
+    }
+    @IBAction func kinderfreibetragAction(sender: NSPopUpButton) {
+        defaults.setObject(sender.selectedItem!.title, forKey: "kinderfreibetragSelectbox")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.steuerklasseSelectbox.addItemsWithTitles(
             ["I","II","III","IV","V","VI",])
-        self.birthdaySelectbox.addItemsWithTitles(
-            ["I","II","III","IV","V","VI",])
+        
+        if (defaults.objectForKey("steuerklasseSelectbox") != nil) {
+            self.steuerklasseSelectbox.setTitle(defaults.objectForKey("steuerklasseSelectbox") as! String)
+        }
+        
+        let calendar = NSCalendar.currentCalendar()
+        let year = calendar.component(.Year,fromDate: NSDate())
+        for var i=1940; i<year; ++i {
+            self.birthdaySelectbox.addItemsWithTitles(
+                ["\(i)"])
+        }
+        if (defaults.objectForKey("birthdaySelectbox") != nil) {
+            self.birthdaySelectbox.setTitle(defaults.objectForKey("birthdaySelectbox") as! String)
+        }
         
         self.kinderfreibetragSelectbox.addItemsWithTitles(["0"])
-        for var i=0; i<10; ++i {
-            self.kinderfreibetragSelectbox.addItemsWithTitles(["\(Double(i) + 0.5)"])
+        for var i=0; i<20; ++i {
+            let value = Double(i)/2 + 0.5
+            self.kinderfreibetragSelectbox.addItemsWithTitles(["\(value)"])
+        }
+        if (defaults.objectForKey("kinderfreibetragSelectbox") != nil) {
+            self.kinderfreibetragSelectbox.setTitle(defaults.objectForKey("kinderfreibetragSelectbox") as! String)
         }
     }
 
 }
 
-class ViewController: NSViewController {
+class ViewController: BaseController {
     
     @IBOutlet weak var lohnsteuerField: NSTextField!
     @IBOutlet weak var bruttoeinkommenField: NSTextField!
@@ -78,10 +115,7 @@ class ViewController: NSViewController {
         let url_year = self.sv_beitraege[(self.selectYear.selectedItem?.title)!]!["url"]!
         let bruttoeinkommen = self.bruttoeinkommenField.floatValue
         let url = NSURL(string: "https://www.bmf-steuerrechner.de/interface/\(url_year).jsp?LZZ=2&RE4=\(Int(bruttoeinkommen*100))&STKL=1")
-        
-        print(url)
-        
-        
+        //print(url)
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             //print(NSString(data: data!, encoding: NSUTF8StringEncoding))
             let xml = SWXMLHash.parse(data!)
@@ -93,24 +127,20 @@ class ViewController: NSViewController {
                 let soli = Float((try xml["lohnsteuer"]["ausgaben"]["ausgabe"].withAttr("name", "SOLZLZZ").element?.attributes["value"])!)! / 100.00
                 self.soliField.floatValue = soli
                 
-                // Berechnung KV 2015 (8,2%)
-                print(self.sv_beitraege["ab 12/2015"]!["kv"])
-                let kv = bruttoeinkommen * 0.082
+                // Berechnung SV Beiträge
+                let beitrag = self.sv_beitraege[(self.selectYear.selectedItem?.title)!]
+                let kv = bruttoeinkommen * (beitrag!["kv"] as! Float)
                 self.kvField.floatValue = kv
-                // Berechnung PV 2015 (1,425%)
-                let pv = bruttoeinkommen * 0.01725
+                let pv = bruttoeinkommen * (beitrag!["pv"] as! Float)
                 self.pvField.floatValue = pv
-                // Berechnung RV 2015 (9,35%)
-                let rv = bruttoeinkommen * 0.0935
+                let rv = bruttoeinkommen * (beitrag!["rv"] as! Float)
                 self.rvField.floatValue = rv
-                // Berechnung AV 2015 (1,5%)
-                let av =  bruttoeinkommen * 0.015
+                let av =  bruttoeinkommen * (beitrag!["av"] as! Float)
                 self.avField.floatValue = av
-                
+                //gesamt netto berechnen
                 self.nettoeinkommenField.floatValue =
                     self.bruttoeinkommenField.floatValue - lohnsteuer - soli - kv - pv - av - rv
-                
-                
+
             } catch {
                 // error is an XMLIndexer.Error instance that you can deal with
                 print(error)
@@ -125,14 +155,13 @@ class ViewController: NSViewController {
         }
     }
     
-    override func awakeFromNib() {
-        print("awake")
-        if self.view.layer != nil {
-            let color : CGColorRef = CGColorCreateGenericRGB(0, 0, 0, 0.5)
-            self.view.layer?.backgroundColor = color
-        }
-        
-    }
+//    override func awakeFromNib() {
+//        if self.view.layer != nil {
+//            let color : CGColorRef = CGColorCreateGenericRGB(1, 0.5, 1, 0.5)
+//            self.view.layer?.backgroundColor = color
+//        }
+//        
+//    }
 
 
 }
