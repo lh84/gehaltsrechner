@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
@@ -866,7 +866,7 @@
                             </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-mD-vge">
                                 <rect key="frame" x="340" y="260" width="29" height="26"/>
-                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" image="B1C67C8A-A457-4030-80AC-7F62DCCE308D" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMS-tR-ug4">
+                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" image="88A9DEAB-1EEE-471C-811C-54CFA15C0D1E" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMS-tR-ug4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1057,7 +1057,7 @@ SWXMLHash - https://github.com/drmohundro/SWXMLHash</string>
         </scene>
     </scenes>
     <resources>
-        <image name="B1C67C8A-A457-4030-80AC-7F62DCCE308D" width="1" height="1">
+        <image name="88A9DEAB-1EEE-471C-811C-54CFA15C0D1E" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
